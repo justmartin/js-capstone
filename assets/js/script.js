@@ -7,7 +7,6 @@ $(document).ready(function() {
 		randomWord =  wordArray[Math.floor(Math.random() * wordArray.length)];
 		console.log(randomWord);
 		splitWord = randomWord.split("");
-		console.log(splitWord);
 
 		underscoreArray = [];
 		for (var i = 0; i < splitWord.length; i++){
@@ -15,25 +14,24 @@ $(document).ready(function() {
 		};
 
 		$("#random-word").append(underscoreArray);
-
 	});
 
-	$("#guess-button").click(function() {
-		guessedLetter = $("#guessed-letter")[0].value;
-		storeGuessedLetters(guessedLetter);
-
-		
-		while(splitWord.indexOf(guessedLetter) != -1) {
-			searchedLetterIndex = splitWord.indexOf(guessedLetter);
-			underscoreArray[searchedLetterIndex] = guessedLetter;
-			splitWord[searchedLetterIndex] = "-"
-		};
-
-		$("#random-word").html(underscoreArray);
-		$("#guessed-letter")[0].value = "";
-	});
+	// $("#guess-button").click(function() {
+	// 	guessedLetter = $("#guessed-letter")[0].value;
+	// });
 
 });
+
+function guessClickedLetter (letter) {
+	while(splitWord.indexOf(letter) != -1) {
+		searchedLetterIndex = splitWord.indexOf(letter);
+		underscoreArray[searchedLetterIndex] = letter;
+		splitWord[searchedLetterIndex] = "-"
+	};
+
+	$("#random-word").html(underscoreArray);
+	// $("#guessed-letter")[0].value = "";
+};
 
 function storeGuessedLetters(guessedLetter) {
 	guessedArray = [];
