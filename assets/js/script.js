@@ -20,6 +20,8 @@ $(document).ready(function() {
 
 	$("#guess-button").click(function() {
 		guessedLetter = $("#guessed-letter")[0].value;
+		storeGuessedLetters(guessedLetter);
+
 		
 		while(splitWord.indexOf(guessedLetter) != -1) {
 			searchedLetterIndex = splitWord.indexOf(guessedLetter);
@@ -30,5 +32,11 @@ $(document).ready(function() {
 		$("#random-word").html(underscoreArray);
 		$("#guessed-letter")[0].value = "";
 	});
-	
+
 });
+
+function storeGuessedLetters(guessedLetter) {
+	guessedArray = [];
+	guessedArray.push(guessedLetter);
+	$("#guessed-letters").append(guessedArray);
+};
