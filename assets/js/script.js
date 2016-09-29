@@ -21,38 +21,18 @@ $(document).ready(function() {
 		$("#letters :input").attr("disabled", false); //enables letters
 	});
 
+	hints = { "elephant": "Large Vegan", 
+			  "orange": "Juicy Fruit",
+			  "creative": "Imagination",
+			  "developer": "NYCDA",
+			  "anxious": "Feeling nervous?",
+			  "jazz": "Louis Armstrong",
+			  "helicopter": "Rotors",
+			  "submarine": "Under the Sea" 
+			};
+
 	$("#hint-button").click(function() {
-		if (randomWord == "elephant") {
-			$("#hint-text").html("Large Vegan");
-		};
-
-		if (randomWord == "orange") {
-			$("#hint-text").html("Juicy Fruit");
-		};
-
-		if (randomWord == "creative") {
-			$("#hint-text").html("Imagination");
-		};
-
-		if (randomWord == "developer") {
-			$("#hint-text").html("NYCDA");
-		};
-
-		if (randomWord == "anxious") {
-			$("#hint-text").html("Feeling nervous?");
-		};
-
-		if (randomWord == "jazz") {
-			$("#hint-text").html("Louis Armstrong");
-		};
-
-		if (randomWord == "helicopter") {
-			$("#hint-text").html("Rotors");
-		};
-
-		if (randomWord == "submarine") {
-			$("#hint-text").html("Under the Sea");
-		};
+		$("#hint-text").html(hints[randomWord]);
 	});
 
 });
