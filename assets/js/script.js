@@ -7,6 +7,7 @@ $(document).ready(function() {
 
 	$("#generate-button").click(function() {
 		$("#random-word").empty(); //clears word display
+		$("#hint-text").empty(); //clears hint text
 		randomWord =  wordArray[Math.floor(Math.random() * wordArray.length)]; //gets random word from array
 		console.log(randomWord);
 		splitWord = randomWord.split(""); //splits random word into array
@@ -20,7 +21,42 @@ $(document).ready(function() {
 		$("#letters :input").attr("disabled", false); //enables letters
 	});
 
+	$("#hint-button").click(function() {
+		if (randomWord == "elephant") {
+			$("#hint-text").html("Large Vegan");
+		};
+
+		if (randomWord == "orange") {
+			$("#hint-text").html("Juicy Fruit");
+		};
+
+		if (randomWord == "creative") {
+			$("#hint-text").html("Imagination");
+		};
+
+		if (randomWord == "developer") {
+			$("#hint-text").html("NYCDA");
+		};
+
+		if (randomWord == "anxious") {
+			$("#hint-text").html("Feeling nervous?");
+		};
+
+		if (randomWord == "jazz") {
+			$("#hint-text").html("Louis Armstrong");
+		};
+
+		if (randomWord == "helicopter") {
+			$("#hint-text").html("Rotors");
+		};
+
+		if (randomWord == "submarine") {
+			$("#hint-text").html("Under the Sea");
+		};
+	});
+
 });
+
 
 function guessClickedLetter (letter) {
 	while(splitWord.indexOf(letter) != -1) {

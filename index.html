@@ -18,20 +18,20 @@
 		</nav>
 
 		<div class="container">
-			<h1 id="random-word"></h1>
-			<br>
-			<button id="generate-button" type="button" class="btn btn-default btn-primary">Generate Word</button>
 
-<!-- 			<br>
-			<input id="guessed-letter" type="text" placeholder="Enter Letter" maxlength="1">
-			<br>
-			<button id="guess-button" type="button" class="btn btn-default btn-primary">Guess!</button> -->
-		
 			<div>
-				<label for="guessed-letters">Guessed Letters: </label>
-				<div id="guessed-letters"></div>
+				<h1 id="random-word"></h1>
+			</div>
+			
+			<div>
+				<button id="generate-button" type="button" class="btn btn-default btn-primary">Generate Word</button>
 			</div>
 
+			<div>
+				<button id="hint-button" type="button" class="btn btn-default btn-info">Hint</button>
+				<div id="hint-text"></div>
+			</div>
+			
 			<div id="letters">
 				<button id="a" class="key-space btn btn-default btn-info" value="a">a</button>
 				<button id="b" class="key-space btn btn-default btn-info" value="b">b</button>
@@ -64,8 +64,14 @@
 				<button id="z" class="key-space btn btn-default btn-info" value="z">z</button>
 			</div>
 
-			<label># of Guesses Left: </label>
-			<div id="guesses-remaining">10</div>
+			<div>
+				<label for="guessed-letters">Guessed Letters: </label>
+				<div id="guessed-letters"></div>
+			</div>
+			<div>
+				<label># of Guesses Left: </label>
+				<div id="guesses-remaining">10</div>	
+			</div>
 
 		</div>
 
