@@ -1,9 +1,22 @@
 .container {
+	width: 70%;
 	text-align: center;
+}
+
+#generate-button {
+	margin-top: 20px;
+}
+
+#letter-row {
+	margin-top: 20px;
 }
 
 .key-space {
 	height: 40px;
 	width: 40px;
-	margin: 5px;
+	margin: 10px;
+}
+
+#game-info-row {
+	margin-top: 30px;
 }

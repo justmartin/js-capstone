@@ -1,13 +1,15 @@
 $(document).ready(function() {
 
 	wordArray = ["elephant", "orange", "creative", "developer", "anxious", "jazz", "helicopter", "submarine"];
-	$("#letters :input").attr("disabled", true); //disables all letters on page load
-	guessedArray = []; //defines array to store guessed letters
-
+	$("#letters :input, .hint :input").attr("disabled", true); //disables all letters on page load
 
 	$("#generate-button").click(function() {
+		guessedArray = []; //defines array to store guessed letters
 		$("#random-word").empty(); //clears word display
 		$("#hint-text").empty(); //clears hint text
+		$("#guesses-remaining").text(10);
+		$("#guessed-letters").html("");
+
 		randomWord =  wordArray[Math.floor(Math.random() * wordArray.length)]; //gets random word from array
 		console.log(randomWord);
 		splitWord = randomWord.split(""); //splits random word into array
@@ -18,7 +20,7 @@ $(document).ready(function() {
 		};
 
 		$("#random-word").html(underscoreArray); //displays blank spaces
-		$("#letters :input").attr("disabled", false); //enables letters
+		$("#letters :input, .hint :input").attr("disabled", false); //enables letters
 	});
 
 	hints = { "elephant": "Large Vegan", 
@@ -37,14 +39,20 @@ $(document).ready(function() {
 
 });
 
-
 function guessClickedLetter (letter) {
 	while(splitWord.indexOf(letter) != -1) {
 		searchedLetterIndex = splitWord.indexOf(letter);
 		underscoreArray[searchedLetterIndex] = letter;
 		splitWord[searchedLetterIndex] = "-"
 	};
+
 	$("#random-word").html(underscoreArray);
+
+	underscorePresent = underscoreArray.indexOf("_ ");
+	console.log(underscoreArray);
+	if (underscorePresent == -1) {
+		alert("Congrats!!! You Won!!!");
+	};
 };
 
 function storeGuessedLetters(guessedLetter) {
@@ -61,6 +69,7 @@ function subtractGuesses() {
 	currentNumber = $("#guesses-remaining").text()
 	newNumber = parseInt(currentNumber) - 1;
 	newText = newNumber.toString();
+
 	$("#guesses-remaining").text(newText);
 };
 

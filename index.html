@@ -20,57 +20,59 @@
 		<div class="container">
 
 			<div>
-				<h1 id="random-word"></h1>
-			</div>
-			
-			<div>
+				<h1 id="random-word">Generate to Play!</h1>
 				<button id="generate-button" type="button" class="btn btn-default btn-primary">Generate Word</button>
 			</div>
 
-			<div>
-				<button id="hint-button" type="button" class="btn btn-default btn-info">Hint</button>
-				<div id="hint-text"></div>
-			</div>
-			
-			<div id="letters">
-				<button id="a" class="key-space btn btn-default btn-info" value="a">a</button>
-				<button id="b" class="key-space btn btn-default btn-info" value="b">b</button>
-				<button id="c" class="key-space btn btn-default btn-info" value="c">c</button>
-				<button id="d" class="key-space btn btn-default btn-info" value="d">d</button>
-				<button id="e" class="key-space btn btn-default btn-info" value="e">e</button>
-				<button id="f" class="key-space btn btn-default btn-info" value="f">f</button>
-				<button id="g" class="key-space btn btn-default btn-info" value="g">g</button>
-				<br>
-				<button id="h" class="key-space btn btn-default btn-info" value="h">h</button>
-				<button id="i" class="key-space btn btn-default btn-info" value="i">i</button>
-				<button id="j" class="key-space btn btn-default btn-info" value="j">j</button>
-				<button id="k" class="key-space btn btn-default btn-info" value="k">k</button>
-				<button id="l" class="key-space btn btn-default btn-info" value="l">l</button>
-				<button id="m" class="key-space btn btn-default btn-info" value="m">m</button>
-				<button id="n" class="key-space btn btn-default btn-info" value="n">n</button>
-				<br>
-				<button id="o" class="key-space btn btn-default btn-info" value="o">o</button>
-				<button id="p" class="key-space btn btn-default btn-info" value="p">p</button>
-				<button id="q" class="key-space btn btn-default btn-info" value="q">q</button>
-				<button id="r" class="key-space btn btn-default btn-info" value="r">r</button>
-				<button id="s" class="key-space btn btn-default btn-info" value="s">s</button>
-				<button id="t" class="key-space btn btn-default btn-info" value="t">t</button>
-				<button id="u" class="key-space btn btn-default btn-info" value="u">u</button>
-				<br>
-				<button id="v" class="key-space btn btn-default btn-info" value="v">v</button>
-				<button id="w" class="key-space btn btn-default btn-info" value="w">w</button>
-				<button id="x" class="key-space btn btn-default btn-info" value="x">x</button>
-				<button id="y" class="key-space btn btn-default btn-info" value="y">y</button>
-				<button id="z" class="key-space btn btn-default btn-info" value="z">z</button>
+			<div id="letter-row" class="row">
+				<div id="letters" class="col-md-12">
+					<button id="a" class="key-space btn btn-default btn-info" value="a">a</button>
+					<button id="b" class="key-space btn btn-default btn-info" value="b">b</button>
+					<button id="c" class="key-space btn btn-default btn-info" value="c">c</button>
+					<button id="d" class="key-space btn btn-default btn-info" value="d">d</button>
+					<button id="e" class="key-space btn btn-default btn-info" value="e">e</button>
+					<button id="f" class="key-space btn btn-default btn-info" value="f">f</button>
+					<button id="g" class="key-space btn btn-default btn-info" value="g">g</button>
+					<br>
+					<button id="h" class="key-space btn btn-default btn-info" value="h">h</button>
+					<button id="i" class="key-space btn btn-default btn-info" value="i">i</button>
+					<button id="j" class="key-space btn btn-default btn-info" value="j">j</button>
+					<button id="k" class="key-space btn btn-default btn-info" value="k">k</button>
+					<button id="l" class="key-space btn btn-default btn-info" value="l">l</button>
+					<button id="m" class="key-space btn btn-default btn-info" value="m">m</button>
+					<button id="n" class="key-space btn btn-default btn-info" value="n">n</button>
+					<br>
+					<button id="o" class="key-space btn btn-default btn-info" value="o">o</button>
+					<button id="p" class="key-space btn btn-default btn-info" value="p">p</button>
+					<button id="q" class="key-space btn btn-default btn-info" value="q">q</button>
+					<button id="r" class="key-space btn btn-default btn-info" value="r">r</button>
+					<button id="s" class="key-space btn btn-default btn-info" value="s">s</button>
+					<button id="t" class="key-space btn btn-default btn-info" value="t">t</button>
+					<button id="u" class="key-space btn btn-default btn-info" value="u">u</button>
+					<br>
+					<button id="v" class="key-space btn btn-default btn-info" value="v">v</button>
+					<button id="w" class="key-space btn btn-default btn-info" value="w">w</button>
+					<button id="x" class="key-space btn btn-default btn-info" value="x">x</button>
+					<button id="y" class="key-space btn btn-default btn-info" value="y">y</button>
+					<button id="z" class="key-space btn btn-default btn-info" value="z">z</button>
+				</div>
 			</div>
 
-			<div>
-				<label for="guessed-letters">Guessed Letters: </label>
-				<div id="guessed-letters"></div>
-			</div>
-			<div>
-				<label># of Guesses Left: </label>
-				<div id="guesses-remaining">10</div>	
+			<div id="game-info-row" class="row">
+				<div class="col-md-4">
+					<label for="guessed-letters">Guessed Letters: </label>
+					<div id="guessed-letters"></div>
+				</div>
+
+				<div class="col-md-4">
+					<label># of Guesses Left: </label>
+					<div id="guesses-remaining">10</div>	
+				</div>
+
+				<div class="hint col-md-4">
+					<button id="hint-button" type="button" class="btn btn-default btn-warning">Hint</button>
+					<div id="hint-text"></div>
+				</div>
 			</div>
 
 		</div>
