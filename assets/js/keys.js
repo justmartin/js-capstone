@@ -5,6 +5,7 @@ $(document).ready(function() {
 		storeGuessedLetters(a);
 		guessClickedLetter(a);
 		$("#a").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#b").click(function() {
@@ -12,6 +13,7 @@ $(document).ready(function() {
 		storeGuessedLetters(b);
 		guessClickedLetter(b);
 		$("#b").attr("disabled", "true");
+		subtractGuesses();
 	});
 	
 	$("#c").click(function() {
@@ -19,6 +21,7 @@ $(document).ready(function() {
 		storeGuessedLetters(c);
 		guessClickedLetter(c);
 		$("#c").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#d").click(function() {
@@ -26,6 +29,7 @@ $(document).ready(function() {
 		storeGuessedLetters(d);
 		guessClickedLetter(d);
 		$("#d").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#e").click(function() {
@@ -33,6 +37,7 @@ $(document).ready(function() {
 		storeGuessedLetters(e);
 		guessClickedLetter(e);
 		$("#e").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#f").click(function() {
@@ -40,6 +45,7 @@ $(document).ready(function() {
 		storeGuessedLetters(f);
 		guessClickedLetter(f);
 		$("#f").attr("disabled", "true");
+		subtractGuesses();
 	});
 	
 	$("#g").click(function() {
@@ -47,6 +53,7 @@ $(document).ready(function() {
 		storeGuessedLetters(g);
 		guessClickedLetter(g);
 		$("#g").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#h").click(function() {
@@ -54,6 +61,7 @@ $(document).ready(function() {
 		storeGuessedLetters(h);
 		guessClickedLetter(h);
 		$("#h").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#i").click(function() {
@@ -61,6 +69,7 @@ $(document).ready(function() {
 		storeGuessedLetters(i);
 		guessClickedLetter(i);
 		$("#i").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#j").click(function() {
@@ -68,6 +77,7 @@ $(document).ready(function() {
 		storeGuessedLetters(j);
 		guessClickedLetter(j);
 		$("#j").attr("disabled", "true");
+		subtractGuesses();
 	});
 	
 	$("#k").click(function() {
@@ -75,6 +85,7 @@ $(document).ready(function() {
 		storeGuessedLetters(k);
 		guessClickedLetter(k);
 		$("#k").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#l").click(function() {
@@ -82,6 +93,7 @@ $(document).ready(function() {
 		storeGuessedLetters(l);
 		guessClickedLetter(l);
 		$("#l").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#m").click(function() {
@@ -89,6 +101,7 @@ $(document).ready(function() {
 		storeGuessedLetters(m);
 		guessClickedLetter(m);
 		$("#m").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#n").click(function() {
@@ -96,6 +109,7 @@ $(document).ready(function() {
 		storeGuessedLetters(n);
 		guessClickedLetter(n);
 		$("#n").attr("disabled", "true");
+		subtractGuesses();
 	});
 	
 	$("#o").click(function() {
@@ -103,6 +117,7 @@ $(document).ready(function() {
 		storeGuessedLetters(o);
 		guessClickedLetter(o);
 		$("#o").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#p").click(function() {
@@ -110,6 +125,7 @@ $(document).ready(function() {
 		storeGuessedLetters(p);
 		guessClickedLetter(p);
 		$("#p").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#q").click(function() {
@@ -117,6 +133,7 @@ $(document).ready(function() {
 		storeGuessedLetters(q);
 		guessClickedLetter(q);
 		$("#q").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#r").click(function() {
@@ -124,6 +141,7 @@ $(document).ready(function() {
 		storeGuessedLetters(r);
 		guessClickedLetter(r);
 		$("#r").attr("disabled", "true");
+		subtractGuesses();
 	});
 	
 	$("#s").click(function() {
@@ -131,6 +149,7 @@ $(document).ready(function() {
 		storeGuessedLetters(s);
 		guessClickedLetter(s);
 		$("#s").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#t").click(function() {
@@ -138,6 +157,7 @@ $(document).ready(function() {
 		storeGuessedLetters(t);
 		guessClickedLetter(t);
 		$("#t").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 
@@ -146,6 +166,7 @@ $(document).ready(function() {
 		storeGuessedLetters(u);
 		guessClickedLetter(u);
 		$("#u").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#v").click(function() {
@@ -153,6 +174,7 @@ $(document).ready(function() {
 		storeGuessedLetters(v);
 		guessClickedLetter(v);
 		$("#v").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#w").click(function() {
@@ -160,6 +182,7 @@ $(document).ready(function() {
 		storeGuessedLetters(w);
 		guessClickedLetter(w);
 		$("#w").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#x").click(function() {
@@ -167,6 +190,7 @@ $(document).ready(function() {
 		storeGuessedLetters(x);
 		guessClickedLetter(x);
 		$("#x").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#y").click(function() {
@@ -174,6 +198,7 @@ $(document).ready(function() {
 		storeGuessedLetters(y);
 		guessClickedLetter(y);
 		$("#y").attr("disabled", "true");
+		subtractGuesses();
 	});
 
 	$("#z").click(function() {
@@ -181,6 +206,7 @@ $(document).ready(function() {
 		storeGuessedLetters(z);
 		guessClickedLetter(z);
 		$("#z").attr("disabled", "true");
+		subtractGuesses();
 	});
 		
 });

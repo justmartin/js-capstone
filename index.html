@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 	<body>
-		<nav class="navbar navbar-default">
+		<nav class="navbar navbar-default navbar-inverse">
 		 	<div class="container-fluid">
 		   		<div class="navbar-header">
 		      		<a class="navbar-brand" href="#">JS Capstone</a>
@@ -18,7 +18,7 @@
 		</nav>
 
 		<div class="container">
-			<p id="random-word"></p>
+			<h1 id="random-word"></h1>
 			<br>
 			<button id="generate-button" type="button" class="btn btn-default btn-primary">Generate Word</button>
 
@@ -28,6 +28,7 @@
 			<button id="guess-button" type="button" class="btn btn-default btn-primary">Guess!</button> -->
 		
 			<div>
+				<label for="guessed-letters">Guessed Letters: </label>
 				<div id="guessed-letters"></div>
 			</div>
 
@@ -62,6 +63,10 @@
 				<button id="y" class="key-space btn btn-default btn-info" value="y">y</button>
 				<button id="z" class="key-space btn btn-default btn-info" value="z">z</button>
 			</div>
+
+			<label># of Guesses Left: </label>
+			<div id="guesses-remaining">10</div>
+
 		</div>
 
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
