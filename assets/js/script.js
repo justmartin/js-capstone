@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 	wordArray = ["elephant", "orange", "creative", "developer", "anxious", "jazz", "helicopter", "submarine"];
-	$("#letters :input, .hint :input").attr("disabled", true); //disables all letters on page load
+	$("#letters :input, .hint :input, #guess-input-container :input").attr("disabled", true); //disables all letters on page load
 
 	$("#generate-button").click(function() {
 		//defines array to store guessed letter
@@ -11,6 +11,7 @@ $(document).ready(function() {
 		$("#hint-text").empty();
 		$("#guesses-remaining").text(10);
 		$("#guessed-letters").html("");
+		$("#guess-input")[0].value = "";
 
 		randomWord =  wordArray[Math.floor(Math.random() * wordArray.length)]; //gets random word from array
 		console.log(randomWord);
@@ -22,7 +23,18 @@ $(document).ready(function() {
 		};
 
 		$("#random-word").html(underscoreArray); //displays blank spaces
-		$("#letters :input, .hint :input").attr("disabled", false); //enables letters
+		$("#letters :input, .hint :input, #guess-input-container :input").attr("disabled", false); //enables letters
+	});
+
+	$("#guess-input-button").click(function() {
+		userGuess = $("#guess-input")[0].value;
+		if (userGuess == randomWord) {
+			$("#random-word").html(userGuess);
+			$("#letters :input, .hint :input, #guess-input-container :input").attr("disabled", true);
+			alert("Congrats!!! You Won!!!" + "\n" + "Click 'Generate Word' to Play Again!");
+		} else {
+			alert("You're so wrong!");
+		};
 	});
 
 	//defines object with keys and values for hints
@@ -56,7 +68,7 @@ function guessClickedLetter (letter) {
 	//checks if there are any underscores left in the underscore array. if not, user wins.
 	underscorePresent = underscoreArray.indexOf("_ "); 
 	if (underscorePresent == -1) {
-		alert("Congrats!!! You Won!!!");
+		alert("Congrats!!! You Won!!!" + "\n" + "Click 'Generate Word' to Play Again!");
 	};
 };
 
@@ -79,3 +91,14 @@ function subtractGuesses() {
 
 	$("#guesses-remaining").text(newText);
 };
+
+
+
+
+
+
+
+
+
+
+

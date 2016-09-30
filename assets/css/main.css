@@ -11,6 +11,16 @@ h1 {
 	margin-top: 20px;
 }
 
+#guess-input-container {
+	width: 25%;
+	margin: auto;
+	margin-top: 20px;
+}
+
+#guess-input {
+	text-transform: lowercase;
+}
+
 #letter-row {
 	margin-top: 20px;
 }
