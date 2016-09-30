@@ -62,7 +62,7 @@ function guessClickedLetter (letter) {
 
 //allows the user 10 tries to guess the word
 function storeGuessedLetters(guessedLetter) {
-	if (guessedArray.length < 10) {
+	if (guessedArray.length < 9) {
 		guessedArray.push(guessedLetter); //stores guessed letter in array
 		$("#guessed-letters").html(guessedArray); //displays guessed letters to user
 	} else {
