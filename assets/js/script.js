@@ -26,6 +26,7 @@ $(document).ready(function() {
 		$("#letters :input, .hint :input, #guess-input-container :input").attr("disabled", false); //enables letters
 	});
 
+	//allows the user to guess the random word and notifies if they are right or wrong
 	$("#guess-input-button").click(function() {
 		userGuess = $("#guess-input")[0].value;
 		if (userGuess == randomWord) {
