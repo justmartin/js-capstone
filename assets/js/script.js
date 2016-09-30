@@ -66,7 +66,7 @@ function storeGuessedLetters(guessedLetter) {
 		guessedArray.push(guessedLetter); //stores guessed letter in array
 		$("#guessed-letters").html(guessedArray); //displays guessed letters to user
 	} else {
-		alert("You're out of tries!" + "\n" + "Click Generate Word to Play Again!");
+		alert("You're out of tries!" + "\n" + "The word was: " + randomWord + "\n" + "Click 'Generate Word' to Play Again!");
 		$("#letters :input").attr("disabled", true); //disables buttons when limit is reached
 	};
 };
